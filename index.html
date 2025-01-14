@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body1{
+            background-color: black;
+            color: aliceblue;
+        }
+
+        li{
+            display: inline-block;
+            list-style: none;
+            font-size: 19px;
+            margin-right: 15px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        p{
+            display: inline-block;
+            list-style: none;
+            font-size: 19px;
+            margin-right: 25px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .navbar{
+            padding-right: 10px;
+            padding-left: 10px;
+
+        }
+        .div1{
+            display: inline-flex;
+            justify-content:space-between;  
+        }
+        input{
+            background-color: black;
+            margin-left: 200px;
+            font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #d4d4d4;
+  border: 1px solid #3a3a3a;
+  height: 40px;
+        }
+        .logo{
+            display:inline;
+        }
+        .navbar-brand{
+            text-decoration: none;
+            color: aliceblue;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        a{
+            margin-left: 80px;
+        }
+        img{
+            margin-left: 60px;
+            padding-right: 20px;
+        }
+        .div2{
+            text-align: center;
+        }
+        .p1{
+            font-size: 15px;
+        }
+        .div3{
+            text-align: center;
+        }
+        .p2{
+            font-size: 50px;
+        }
+        .container{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .announcement{
+            margin-right: 100px;
+        }
+        .announcement a{
+            color: #007acc;
+        }
+        .content h1{
+            font-size: 65px;
+
+        }
+        button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Primary Button */
+.primary {
+  background-color: #007acc;
+  color: white;
+  margin-right: 10px;
+}
+
+.primary:hover {
+  background-color: #005f99;
+}
+
+/* Secondary Button */
+.secondary {
+  background-color: #2d2d2d;
+  color: #d4d4d4;
+  border: 1px solid #3a3a3a;
+}
+
+.secondary:hover {
+  background-color: #383838;
+}
+.links a{
+    margin-right: 100px;
+    font-size: 13px;
+    color: #007acc;
+}
+.v1{
+    justify-items: center;
+}
+.div4{
+  display: block;
+  align-items: center;
+  z-index: 1;
+}
+.div5{
+    z-index: 2;
+}
+.box1 {
+   
+  position: absolute;
+  z-index: 1;
+  height: 1000px;
+  width: 1000px;
+  margin-left: 150px;
+}
+.box2 {
+    
+  position:relative;
+  z-index: 2;
+  height: 900px;
+  width: 900px;
+  margin-top: 50px;
+  margin-left: 260px;
+}
+/* General Reset */
+body, h1, h2, p, pre, button {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #d4d4d4;
+}
+
+body {
+  background-color: #1e1e1e;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Feature Section */
+.feature-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.feature-card {
+  background-color: #2d2d2d;
+  padding: 20px;
+  border-radius: 8px;
+  width: 30%;
+  text-align: left;
+}
+
+.feature-card .dropdown {
+  margin-top: 10px;
+  position: relative;
+}
+
+.feature-card .dropdown button {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.feature-card .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  z-index: 10;
+}
+
+.feature-card .dropdown-content p {
+  margin: 0;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.feature-card .dropdown-content p:hover {
+  background-color: #444;
+}
+
+.feature-card .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.feature-card .code-snippet {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+/* Call-to-Action Banner */
+.cta-banner {
+  background: linear-gradient(90deg, #007acc, #4caf50);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-bottom: 30px;
+}
+
+.cta-banner h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cta-banner p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.cta-banner button {
+  background-color: white;
+  color: #007acc;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cta-banner button:hover {
+  background-color: #f0f0f0;
+}
+.h3{
+    margin-left: 150px;
+}
+.p3{
+    font-size: 25px;
+}
+
+    </style>
+</head>
+<body class="body1">
+    <nav class="navbar">
+    <div class="div1">
+        <ul>
+            <img src="Screenshot_2025-01-11_090549-removebg-preview.png" alt="" width="30" height="30" >
+            <p class="p3">Visual Studio Code</p>
+            <li>Docs</li>
+            <li>Updates</li>
+            <li>Blog</li>
+            <li>API</li>
+            <li>Extensions</li>
+            <li>FAQ</li>
+            <li>Github Copilot</li>
+            <input type="search" placeholder="Search Docs">
+            <button class="primary">Download</button>
+        </ul>
+    </div>
+</nav>
+<br>
+<div class="container">
+    <div class="announcement">
+      <span><a href="#"> GitHub Copilot Free</a> in VS Code!</span>
+    </div>
+    <div class="content">
+      <h1>Your code editor.<br>Redefined with AI.</h1>
+      <div class="buttons">
+        <button class="primary">Download for Windows</button>
+        <button class="secondary">Get Copilot Free</button>
+      </div>
+      <div class="links">
+        <a href="#">Web, Insiders edition, or other platforms</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br><br>
+  <div class="box1">
+  <img src="hero-background.webp" alt="" height="1100" width="1100">
+</div>
+<div class="box2">
+  <iframe src="hero-dark-lg.webm" frameborder="0" height="1000px" width="1000px"></iframe>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="feature-section">
+    <div class="feature-card">
+      <h2>Choose the model that works for you</h2>
+      <p>Pick the model that works best for your project and team, including GPT 4o and Claude Sonnet.</p>
+      <div class="dropdown">
+        <button>GPT 4o ▼</button>
+        <div class="dropdown-content">
+          <p>Claude 3.5 Sonnet (Preview)</p>
+          <p>GPT 4o</p>
+          <p>o1-mini (Preview)</p>
+          <p>o1-preview (Preview)</p>
+        </div>
+      </div>
+    </div>
+    <div class="feature-card">
+      <h2>An expert on your codebase</h2>
+      <p>Copilot locally indexes your codebase to understand what’s relevant and supplements that context to interactions with Copilot.</p>
+      <div class="code-snippet">
+        <p><b>Working set (2 files)</b></p>
+        <p>settings.json <i>Open Editor</i></p>
+        <p>HistoryView.swift <i>WaterTracker</i></p>
+        <p>#codebase #file:HistoryView.swift</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <h2>Personalized to your needs</h2>
+      <p>Copilot works the way you do. Customize Copilot's prompts with details about your team’s workflows, tools, and projects.</p>
+      <div class="code-snippet">
+        <pre>{
+  "github.copilot.chat.codeGeneration.instructions": [
+    { "text": "Use React functional components." },
+    { "file": "code-style.md" }
+  ]
+}</pre>
+      </div>
+    </div>
+  </div>
+  <div class="cta-banner">
+    <h2>Activate Copilot Free in Visual Studio Code</h2>
+    <p>No trial. No credit card required. Just your GitHub account.</p>
+    <button>Get Copilot Free</button>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="h3">
+    <h1>Create faster</h1>
+    <p>Describe what you want to build in natural language,</p><br> <p>and Copilot Edits takes care of the rest.</p><br><p> Copilot Edits makes changes across files in</p><br><p> your codebase with a UI designed for rapid iteration.</p> <br><p>It's the fastest way to add new functionality to your apps.</p>
+    <br>
+    <br>
+    <p>helping you to answer questions, explain code,</p><br> <p>and propose fixes. Chat is available wherever you.</p><br><p> Copilot Edits makes changes across files in</p><br><p> your codebase with a UI designed for rapid iteration.</p> <br><p>It's the fastest way to add new functionality to your apps.</p>
+    <br>
+  </div>
+</body>
+</html>
